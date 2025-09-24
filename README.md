@@ -67,9 +67,10 @@ optimizer = optim.Adam(model.parameters(), lr=1e-3)
 ```
 
 ### 4. Eğitim ve Doğrulama Döngüsü
--Model her epoch sonunda doğrulama kaybına göre kontrol edilir.
--En iyi model best_model.pth olarak kaydedilir.
--Early stopping ile gereksiz eğitim önlenir.
+
+- Model her epoch sonunda doğrulama kaybına göre kontrol edilir.
+- En iyi model best_model.pth olarak kaydedilir.
+- Early stopping ile gereksiz eğitim önlenir.
 
 ### 5. Performans Görselleştirme
 ```python
