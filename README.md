@@ -7,7 +7,20 @@ Bu proje, **FashionMNIST** veri seti üzerinde bir **Convolutional Neural Networ
 ---
 
 ## Özellikler
-
+- **Veri Seti:** 
+  -Fashion-MNIST veri setindeki 10 kategori şunlardır:
+    -T-shirt/top
+    -Trouser (Pantolon)
+    -Pullover (Kazak)
+    -Dress (Elbise)
+    -Coat (Ceket)
+    -Sandal
+    -Shirt (Gömlek)
+    -Sneaker (Spor Ayakkabı)
+    -Bag (Çanta)
+    -Ankle boot (Bilek Botu)
+  -Bu kategoriler, makine öğrenimi modellerinin farklı sınıflandırma görevlerinde performansını test etmek için kullanılır.
+  
 - **Veri Yükleme:** CSV formatındaki FashionMNIST veri seti kullanılır. `label` sütunu sınıf etiketlerini içerir.
 - **Veri Dönüşümleri (Transforms):**
   - Görüntüler 32x32 boyutuna yeniden boyutlandırılır.
