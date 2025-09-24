@@ -109,12 +109,6 @@ print(f"Test Accuracy: {test_acc:.4f}")
 accuracy                           0.92     10000
 ```
 
-### 7. Confusion Matrix ve Rapor
-```python
-sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
-print(classification_report(all_labels, all_preds))
-```
-
 ### Gereksinimler
 
 - Python 3.x
