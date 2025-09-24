@@ -92,17 +92,19 @@ print(classification_report(all_labels, all_preds))
 ```
 
 ### Gereksinimler
-  -Python 3.x
-  -pandas
-  -numpy
-  -torch (PyTorch)
-  -torchvision
-  -matplotlib
-  -seaborn
-  -scikit-learn
-  -Pillow (PIL)
+
+- Python 3.x
+- pandas
+- numpy
+- torch (PyTorch)
+- torchvision
+- matplotlib
+- seaborn
+- scikit-learn
+- Pillow (PIL)
 
 ### Notlar
-  - Kod GPU kullanabiliyorsa otomatik olarak GPU kullanır.
-  -Data augmentation yalnızca eğitim veri setine uygulanır.
-  -Early stopping en iyi doğrulama kaybı noktasındaki ağırlıkları kaydeder.
+
+- Kod, GPU kullanılabiliyorsa otomatik olarak GPU'yu kullanır.
+- Data augmentation yalnızca eğitim veri setine uygulanır.
+- Early stopping, en iyi doğrulama kaybı noktasındaki model ağırlıklarını kaydeder.
