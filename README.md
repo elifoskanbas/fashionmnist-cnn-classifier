@@ -85,6 +85,22 @@ plt.show()
 test_acc = np.mean(np.array(all_preds) == np.array(all_labels))
 print(f"Test Accuracy: {test_acc:.4f}")
 ```
+- Eğitilen CNN modelinin sınıflar bazında precision, recall ve f1-score değerleri aşağıdaki gibidir:
+```yaml
+
+       0       0.86      0.89      0.88      1000
+       1       0.99      0.99      0.99      1000
+       2       0.90      0.89      0.90      1000
+       3       0.91      0.93      0.92      1000
+       4       0.89      0.90      0.89      1000
+       5       0.98      0.98      0.98      1000
+       6       0.81      0.75      0.78      1000
+       7       0.94      0.97      0.96      1000
+       8       0.99      0.98      0.98      1000
+       9       0.97      0.96      0.96      1000
+
+accuracy                           0.92     10000
+```
 
 ### 7. Confusion Matrix ve Rapor
 ```python
