@@ -2,6 +2,8 @@
 
 Bu proje, **FashionMNIST** veri seti üzerinde bir **Convolutional Neural Network (CNN)** modeli eğitmek, doğrulamak ve test etmek için hazırlanmıştır. Kod, erken durdurma (Early Stopping) ve en iyi modelin kaydedilmesini (Checkpoint) destekler.
 
+## Kaggle Notebook Link:
+-**https://www.kaggle.com/code/elifoskanba/fashion-mnist-cnn**
 ---
 
 ## Özellikler
