@@ -2,8 +2,8 @@
 
 Bu proje, **FashionMNIST** veri seti üzerinde bir **Convolutional Neural Network (CNN)** modeli eğitmek, doğrulamak ve test etmek için hazırlanmıştır. Kod, erken durdurma (Early Stopping) ve en iyi modelin kaydedilmesini (Checkpoint) destekler.
 
-## Kaggle Notebook Link:
--https://www.kaggle.com/code/elifoskanba/fashion-mnist-cnn
+[Kaggle Notebook](https://www.kaggle.com/code/elifoskanba/fashion-mnist-cnn)
+
 ---
 
 ## Özellikler
@@ -28,6 +28,13 @@ Bu proje, **FashionMNIST** veri seti üzerinde bir **Convolutional Neural Networ
   - Eğitim setine ek veri artırma uygulanır (dönme, yatay çevirme).
 
 - **Model:** 2 convolution + pooling katmanı, 1 dense katman, dropout, 10 sınıf çıkışı.
+  - Conv1: 32 filtre, kernel=3x3, ReLU
+  - MaxPool1: 2x2
+  - Conv2: 64  filtre, kernel=3x3, ReLU
+  - MaxPool2: 2x2
+  - Dense: 128 nöron, ReLU
+  - Dropout: 0.5
+  - Output: 10 sınıf, Softmax
 
 - **Eğitim:**
   - Loss: `CrossEntropyLoss`
