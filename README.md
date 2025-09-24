@@ -33,20 +33,21 @@ test_csv  = "/kaggle/input/fashionmnist/fashion-mnist_test.csv"
 
 train_data = FashionMNISTDataset(train_csv, transform=transform)
 test_data  = FashionMNISTDataset(test_csv, transform=transform)
-
+```
 
 ### 2. DataLoader
 ```python
 train_loader = DataLoader(train_data, batch_size=64, shuffle=True)
 val_loader   = DataLoader(val_data, batch_size=64, shuffle=False)
 test_loader  = DataLoader(test_data, batch_size=64, shuffle=False)
-
+```
 
 ### 3. Model Eğitimi
 ```python
 model = CNN().to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
+```
 
 ### 4. Eğitim ve Doğrulama Döngüsü
 -Model her epoch sonunda doğrulama kaybına göre kontrol edilir.
@@ -59,16 +60,19 @@ plt.plot(train_losses, label="Train Loss")
 plt.plot(val_losses, label="Val Loss")
 plt.title("Loss")
 plt.show()
+```
 
 ### 6. Test Değerlendirmesi
 ```python
 test_acc = np.mean(np.array(all_preds) == np.array(all_labels))
 print(f"Test Accuracy: {test_acc:.4f}")
+```
 
 ### 7. Confusion Matrix ve Rapor
 ```python
 sns.heatmap(cm, annot=True, fmt="d", cmap="Blues")
 print(classification_report(all_labels, all_preds))
+```
 
 ### Gereksinimler
 -Python 3.x
