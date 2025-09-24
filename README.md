@@ -19,15 +19,16 @@ Bu proje, **FashionMNIST** veri seti üzerinde bir **Convolutional Neural Networ
   - Sneaker (Spor Ayakkabı)
   - Bag (Çanta)
   - Ankle boot (Bilek Botu)
-- Bu kategoriler, makine öğrenimi modellerinin farklı sınıflandırma görevlerinde performansını test etmek için kullanılır.
-
 
 - **Veri Yükleme:** CSV formatındaki FashionMNIST veri seti kullanılır. `label` sütunu sınıf etiketlerini içerir.
+
 - **Veri Dönüşümleri (Transforms):**
   - Görüntüler 32x32 boyutuna yeniden boyutlandırılır.
   - Tensör formatına dönüştürülür ve normalize edilir.
   - Eğitim setine ek veri artırma uygulanır (dönme, yatay çevirme).
+
 - **Model:** 2 convolution + pooling katmanı, 1 dense katman, dropout, 10 sınıf çıkışı.
+
 - **Eğitim:**
   - Loss: `CrossEntropyLoss`
   - Optimizer: `Adam` (lr=0.001)
