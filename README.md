@@ -92,22 +92,24 @@ plt.show()
 test_acc = np.mean(np.array(all_preds) == np.array(all_labels))
 print(f"Test Accuracy: {test_acc:.4f}")
 ```
+- Eğitilen CNN modelinin Loss ve Accuracy grafikleri
+![Loss ve Accuracy](Loss_Accuracy.png)
+
 - Eğitilen CNN modelinin sınıflar bazında precision, recall ve f1-score değerleri aşağıdaki gibidir:
 
 ##### Kernel 3x3, Dropout 0.5, Batch Size = 64
 ```yaml
 
-       0       0.86      0.89      0.88      1000
+       0       0.85      0.89      0.87      1000
        1       0.99      0.99      0.99      1000
-       2       0.90      0.89      0.90      1000
-       3       0.91      0.93      0.92      1000
-       4       0.89      0.90      0.89      1000
-       5       0.98      0.98      0.98      1000
-       6       0.81      0.75      0.78      1000
-       7       0.94      0.97      0.96      1000
-       8       0.99      0.98      0.98      1000
-       9       0.97      0.96      0.96      1000
-
+       2       0.88      0.88      0.88      1000
+       3       0.93      0.93      0.93      1000
+       4       0.87      0.90      0.88      1000
+       5       0.99      0.95      0.97      1000
+       6       0.80      0.73      0.77      1000
+       7       0.94      0.95      0.95      1000
+       8       0.98      0.98      0.98      1000
+       9       0.95      0.98      0.96      1000
 accuracy                           0.92     10000
 ```
 
@@ -140,7 +142,6 @@ accuracy                           0.91      10000
        7       0.96      0.97      0.96      1000
        8       0.98      0.98      0.98      1000
        9       0.97      0.97      0.97      1000
-
 accuracy                           0.92     10000
 ```
 
@@ -157,9 +158,29 @@ accuracy                           0.92     10000
        7       0.95      0.97      0.96      1000
        8       0.98      0.98      0.98      1000
        9       0.97      0.96      0.97      1000
-
 accuracy                           0.92     10000
 ```
+
+- Eğitilen CNN modelinin class bazında Confusion Matrix değerlendirmesi
+![Confusion Matrix](confusionMatrix.png)
+- **Genel doğruluk oldukça yüksek**: Çoğu classın köşegenindeki değerler 850–990 aralığında ve çok belirgin hatalar az.
+- Model, Fashion-MNIST gibi 10 classlı bir veri seti için gayet başarılı.
+
+### Class Bazlı Yorumlar
+| Class         | Doğru Tahmin | Dikkat Çeken Hatalar |
+|---------------|-------------|----------------------|
+| **T-shirt/top** | 886 | En çok **Shirt (91)** ve bir miktar Pullover, Dress ve Bag ile karışmış. T-shirt ile gömlek görsel olarak benzer. |
+| **Trouser**     | 989 | Neredeyse mükemmel, çok az hata (toplam ~14 yanlış). |
+| **Pullover**    | 884 | En çok **Shirt (56)** ve **Coat (29)** ile karışıyor. |
+| **Dress**       | 930 | **Shirt (41)**, **T-shirt/top (32)** ve **Coat (22)** ile karışma var. |
+| **Coat**        | 896 | **Shirt (66)** ve **Pullover (59)** ile sıkça karışıyor. |
+| **Sandal**      | 955 | Mükemmel; nadiren Sneaker/Ankle boot ile karışmış. |
+| **Shirt**       | 734 | En zor sınıf. Çok sayıda T-shirt/top (99), Pullover (63), Coat (64) ile karışıyor. |
+| **Sneaker**     | 953 | Yüksek doğruluk. |
+| **Bag**         | 983 | Mükemmel performans. |
+| **Ankle boot**  | 976 | Yüksek doğruluk, ufak tefek Sneaker (38) karışması var. |
+
+
 
 
 ### Gereksinimler
