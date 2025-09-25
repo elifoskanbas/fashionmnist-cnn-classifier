@@ -92,10 +92,10 @@ plt.show()
 test_acc = np.mean(np.array(all_preds) == np.array(all_labels))
 print(f"Test Accuracy: {test_acc:.4f}")
 ```
-- Eğitilen CNN modelinin Loss ve Accuracy grafikleri
+### Eğitilen CNN modelinin Loss ve Accuracy grafikleri
 ![Loss ve Accuracy](Loss_Accuracy.png)
 
-- Eğitilen CNN modelinin sınıflar bazında precision, recall ve f1-score değerleri aşağıdaki gibidir:
+### Eğitilen CNN modelinin sınıflar bazında precision, recall ve f1-score değerleri aşağıdaki gibidir:
 
 ##### Kernel 3x3, Dropout 0.5, Batch Size = 64
 ```yaml
@@ -161,12 +161,12 @@ accuracy                           0.92     10000
 accuracy                           0.92     10000
 ```
 
-- Eğitilen CNN modelinin class bazında Confusion Matrix değerlendirmesi
+### Eğitilen CNN modelinin class bazında Confusion Matrix değerlendirmesi
 ![Confusion Matrix](confusionMatrix.png)
 - **Genel doğruluk oldukça yüksek**: Çoğu classın köşegenindeki değerler 850–990 aralığında ve çok belirgin hatalar az.
 - Model, Fashion-MNIST gibi 10 classlı bir veri seti için gayet başarılı.
 
-### Class Bazlı Yorumlar
+##### Class Bazlı Yorumlar
 | Class         | Doğru Tahmin | Dikkat Çeken Hatalar |
 |---------------|-------------|----------------------|
 | **T-shirt/top** | 886 | En çok **Shirt (91)** ve bir miktar Pullover, Dress ve Bag ile karışmış. T-shirt ile gömlek görsel olarak benzer. |
